@@ -1,10 +1,12 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"net/http"
+
+	"github.com/Miqbal20/golang-restapi/api"
 )
 
 func main() {
-	r := gin.Default()
-	r.Run()
+	http.HandleFunc("/", api.Handler)
+	http.ListenAndServe(":8080", nil)
 }

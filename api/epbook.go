@@ -12,7 +12,7 @@ var (
 	app *gin.Engine
 )
 
-func Route(r *gin.RouterGroup) {
+func myRoute(r *gin.RouterGroup) {
 	models.ConnectDB()
 
 	r.GET("/index", func(c *gin.Context) {
@@ -26,11 +26,11 @@ func Route(r *gin.RouterGroup) {
 	r.DELETE("/book", bookcontroller.Delete)
 }
 
-// func init() {
-// 	app = gin.New()
-// 	r := app.Group("/api")
-// 	Route(r)
-// }
+func init() {
+	app = gin.New()
+	r := app.Group("/api")
+	myRoute(r)
+}
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	app.ServeHTTP(w, r)

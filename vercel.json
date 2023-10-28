@@ -3,7 +3,7 @@
    "rewrites":[
         {
             "source": "/api(.*)",
-            "destination": "/api/ep.go"
+            "destination": "/api/epbook.go"
         }
    ]
 }

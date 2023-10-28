@@ -11,7 +11,7 @@ var DB *gorm.DB
 
 func ConnectDB() {
 	//Inisialisasi database
-	dbname := "root:@tcp(localhost:3306/go_restapi)"
+	dbname := "root:@tcp(localhost:3306)/go_restapi"
 
 	// Koneksi Database
 	database, err := gorm.Open(mysql.Open(dbname))
