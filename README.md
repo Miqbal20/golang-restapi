@@ -13,9 +13,9 @@ go get grom.io/driver/mysql@latest
 
 ### Models dan Controllers
 1. Buat file models/setup.go => buat setup
-2. Buat file models/product.go => buat model product
+2. Buat file models/___.go => buat model ___
 3. Edit main.go => Buat Route untuk API
-4. buat file controllers/productController/productController.go
+4. buat file controllers/___Controller/___Controller.go
 5. Install Swagger
 ```
 go get -u github.com/swaggo/swag/cmd/swag@latest
